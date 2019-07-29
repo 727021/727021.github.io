@@ -2,10 +2,9 @@ function sendAjax() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            //console.log(this.responseText);
             var repos = JSON.parse(this.responseText);
             repos.forEach(repo => {
-                // This is temporary
+                // Some of this is temporary
                 var section = document.createElement("section");
                 var a = document.createElement("a");
                 a.setAttribute("href", repo.html_url);
@@ -19,7 +18,3 @@ function sendAjax() {
     xhttp.send();
 }
 sendAjax();
-
-window.onresize = function() {
-    document.title = window.innerWidth + " / " + window.outerWidth;
-}
