@@ -1,0 +1,38 @@
+$breakpoint-small: 700px;
+$breakpoint-large: 1400px;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    background: transparent;
+}
+
+section {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: calc(100vw - 5px * 2);
+    height: calc(100vw - 5px * 2);
+}
+
+@media only screen and (min-width: $breakpoint-small) {
+    section {
+        width: calc((100vw - 2 * 5px * 2) / 2);
+        height: calc((100vw - 2 * 5px * 2) / 2);
+    }
+}
+
+@media only screen and (min-width: $breakpoint-large) {
+    section {
+        width: calc((100% - 3 * 5px * 2) / 3);
+        height: calc((100% - 3 * 5px * 2) / 3);
+    }
+}
