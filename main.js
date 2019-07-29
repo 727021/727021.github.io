@@ -6,11 +6,12 @@ function sendAjax() {
             var repos = JSON.parse(this.responseText);
             repos.forEach(repo => {
                 // This is temporary
+                var section = document.createElement("section");
                 var a = document.createElement("a");
                 a.setAttribute("href", repo.html_url);
                 a.appendChild(document.createTextNode(repo.name));
-                document.getElementsByTagName("main")[0].appendChild(a);
-                document.getElementsByTagName("main")[0].appendChild(document.createElement("br"));
+                section.appendChild(a);
+                document.getElementsByTagName("main")[0].appendChild(section);
             });
         }
     }
@@ -18,3 +19,7 @@ function sendAjax() {
     xhttp.send();
 }
 sendAjax();
+
+window.onresize = function() {
+    document.title = window.innerWidth + " / " + window.outerWidth;
+}

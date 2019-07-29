@@ -6,7 +6,46 @@ html, body {
   margin: 0;
 }
 
+header {
+  text-align: center;
+}
+
 main {
   width: 100%;
   background: transparent;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
+  padding: 0 5px;
+}
+main section {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+a:hover {
+  text-decoration: underline;
 }
