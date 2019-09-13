@@ -26,6 +26,27 @@ main {
         border: 1px solid black;
         border-radius: 5px;
         padding: 5px;
+        cursor: default;
+
+        .repoName:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        &:hover {
+            background-color: darken($color: white, $amount: 15);
+        }
+
+        .gitStar, .gitFork {
+            display: block;
+            float: right;
+            cursor: pointer;
+            margin-right: 5px;
+
+            &:hover sub {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
@@ -47,13 +68,13 @@ main {
     }
 }
 
-a {
-    text-decoration: none;
-    color: black;
-    display: block;
-    width: 100%;
-    height: 100%;
-    &:hover {
-        text-decoration: underline;
-    }
-}
+// a {
+//     text-decoration: none;
+//     color: black;
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     &:hover {
+//         text-decoration: underline;
+//     }
+// }
