@@ -26,7 +26,7 @@
                         <a href="projects.html" class="nav-link"><i class="fas fa-code"></i><span class="sr-only">Projects</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="resume.html" class="nav-link"><i class="fas fa-scroll"></i><span class="sr-only">Resume</span></a>
+                        <a href="resume.html" class="nav-link disabled"><i class="fas fa-scroll"></i><span class="sr-only">Resume</span></a>
                     </li>
                 </ul>
                 <span class="navbar-text">
@@ -39,8 +39,77 @@
     <!-- Begin page content -->
     <main role="main" class="flex-shrink-0">
         <div class="container">
-            <h1 class="mt-5">Projects</h1>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur ullam, animi modi, unde velit debitis doloremque dicta distinctio ducimus in soluta totam. Saepe consectetur recusandae veritatis maxime ab delectus ea.</p>
+            <h1 class="mt-5 display-4">Projects</h1>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Welcome!</strong> This page is still a work in progress, so expect a lot to change. Check back often to see what's new.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="cs-tab" data-toggle="tab" href="#cs" role="tab" aria-controls="cs" aria-selected="true">C#</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="cpp-tab" data-toggle="tab" href="#cpp" role="tab" aria-controls="cpp" aria-selected="false">C++</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="java-tab" data-toggle="tab" href="#java" role="tab" aria-controls="java" aria-selected="false">Java</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="web-tab" data-toggle="tab" href="#web" role="tab" aria-controls="web" aria-selected="false">Web</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Other</a>
+                </li>
+            </ul>
+            <div class="tab-content pt-1" id="myTabContent">
+                <!-- C# Tab -->
+                <div class="tab-pane fade show active" id="cs" role="tabpanel" aria-labelledby="cs-tab">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="list-group" id="list-tab" role="tablist"><!-- These links will be created in JS with data from Github. -->
+                                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Project 1</a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Project 2</a>
+                                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Project 3</a>
+                                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Project 4</a>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="tab-content" id="nav-tabContent"><!-- This content will be created in JS with data from Github. -->
+                                <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <h3>Project 1 <small class="text-muted">Updated <small>1 Jan 2019</small></small></h3>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="btn-toolbar float-right" role="toolbar">
+                                                <div class="btn-group mr-2" role="group">
+                                                    <a role="button" class="btn btn-secondary" href="#"><i class="fas fa-star"><sub>0</sub></i></a>
+                                                    <a role="button" class="btn btn-secondary" href="#"><i class="fas fa-code-branch"><sub>0</sub></i></a>
+                                                    <a role="button" class="btn btn-primary" href="#"><i class="fas fa-code"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nemo architecto, corporis laborum tempora qui adipisci dolorum eum officia excepturi dolorem veritatis incidunt quibusdam hic nisi! Atque maiores quis impedit!
+                                </div>
+                                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum neque voluptates ad dicta distinctio veritatis quis, cupiditate, id eligendi quae illum expedita nam, quaerat consequuntur magnam assumenda itaque magni.</div>
+                                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quaerat aperiam beatae placeat est tempore, tempora adipisci, corporis nostrum ratione deleniti numquam quidem voluptates, quis aut dolorum cupiditate error obcaecati.</div>
+                                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta, quam dicta amet nisi eum! Sit accusantium tempora sed blanditiis esse non consequatur delectus ex perspiciatis omnis. Expedita, unde inventore.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- C++ Tab -->
+                <div class="tab-pane fade" id="cpp" role="tabpanel" aria-labelledby="cpp-tab">C++ projects go here.</div>
+                <!-- Java Tab -->
+                <div class="tab-pane fade" id="java" role="tabpanel" aria-labelledby="java-tab">Java projects go here.</div>
+                <!-- Web Tab -->
+                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">Web projects go here.</div>
+                <!-- Other Tab -->
+                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">Other projects go here.</div>
+            </div>
         </div>
     </main>
 
