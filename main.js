@@ -98,9 +98,9 @@ function populateTab(tabId, arr) {
                     <div class="col-4">
                         <div class="btn-toolbar float-right" role="toolbar">
                             <div class="btn-group mr-2" role="group">
-                                <a data-toggle="tooltip" data-placement="top" title="Stargazers" role="button" class="btn btn-secondary" href="${repo.html_url}/stargazers"><i class="fas fa-star"><sub>${repo.stargazers_count}</sub></i></a>
-                                <a data-toggle="tooltip" data-placement="top" title="Forks" role="button" class="btn btn-secondary" href="${repo.html_url}/network/members"><i class="fas fa-code-branch"><sub>${repo.forks_count}</sub></i></a>
-                                <a data-toggle="tooltip" data-placement="top" title="Source" role="button" class="btn btn-primary" href="${repo.html_url}"><i class="fas fa-code"></i></a>
+                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="Stargazers" role="button" class="btn btn-secondary" href="${repo.html_url}/stargazers"><i class="fas fa-star"><sub>${repo.stargazers_count}</sub></i></a>
+                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="Forks" role="button" class="btn btn-secondary" href="${repo.html_url}/network/members"><i class="fas fa-code-branch"><sub>${repo.forks_count}</sub></i></a>
+                                <a target="_blank" data-toggle="tooltip" data-placement="top" title="Source" role="button" class="btn btn-primary" href="${repo.html_url}"><i class="fas fa-code"></i></a>
                             </div>
                         </div>
                     </div>
