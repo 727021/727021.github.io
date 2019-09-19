@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="main.css" /> -->
     <title>GitHub / 727021</title>
 </head>
 <body class="d-flex flex-column h-100">
@@ -62,7 +61,7 @@
                     <a class="nav-link" id="web-tab" data-toggle="tab" href="#web" role="tab" aria-controls="web" aria-selected="false">Web</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Other</a>
+                    <a class="nav-link" id="other-tab" data-toggle="tab" href="#other" role="tab" aria-controls="other" aria-selected="false">Other</a>
                 </li>
             </ul>
             <div class="tab-content pt-1" id="myTabContent">
@@ -71,46 +70,66 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="list-group" id="list-tab" role="tablist"><!-- These links will be created in JS with data from Github. -->
-                                <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Project 1</a>
-                                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Project 2</a>
-                                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Project 3</a>
-                                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Project 4</a>
                             </div>
                         </div>
                         <div class="col-8">
                             <div class="tab-content" id="nav-tabContent"><!-- This content will be created in JS with data from Github. -->
-                                <div class="tab-pane fade" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-                                    <div class="row">
-                                        <div class="col-8">
-                                            <h3>Project 1 <small class="text-muted">Updated <small>1 Jan 2019</small></small></h3>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="btn-toolbar float-right" role="toolbar">
-                                                <div class="btn-group mr-2" role="group">
-                                                    <a data-toggle="tooltip" data-placement="top" title="Stargazers" role="button" class="btn btn-secondary" href="#"><i class="fas fa-star"><sub>0</sub></i></a>
-                                                    <a data-toggle="tooltip" data-placement="top" title="Forks" role="button" class="btn btn-secondary" href="#"><i class="fas fa-code-branch"><sub>0</sub></i></a>
-                                                    <a data-toggle="tooltip" data-placement="top" title="Source" role="button" class="btn btn-primary" href="#"><i class="fas fa-code"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nemo architecto, corporis laborum tempora qui adipisci dolorum eum officia excepturi dolorem veritatis incidunt quibusdam hic nisi! Atque maiores quis impedit!
-                                </div>
-                                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum neque voluptates ad dicta distinctio veritatis quis, cupiditate, id eligendi quae illum expedita nam, quaerat consequuntur magnam assumenda itaque magni.</div>
-                                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quaerat aperiam beatae placeat est tempore, tempora adipisci, corporis nostrum ratione deleniti numquam quidem voluptates, quis aut dolorum cupiditate error obcaecati.</div>
-                                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta, quam dicta amet nisi eum! Sit accusantium tempora sed blanditiis esse non consequatur delectus ex perspiciatis omnis. Expedita, unde inventore.</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- C++ Tab -->
-                <div class="tab-pane fade" id="cpp" role="tabpanel" aria-labelledby="cpp-tab">C++ projects go here.</div>
+                <div class="tab-pane fade" id="cpp" role="tabpanel" aria-labelledby="cpp-tab">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="list-group" id="list-tab" role="tablist"><!-- These links will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="tab-content" id="nav-tabContent"><!-- This content will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!-- Java Tab -->
-                <div class="tab-pane fade" id="java" role="tabpanel" aria-labelledby="java-tab">Java projects go here.</div>
+                <div class="tab-pane fade" id="java" role="tabpanel" aria-labelledby="java-tab">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="list-group" id="list-tab" role="tablist"><!-- These links will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="tab-content" id="nav-tabContent"><!-- This content will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!-- Web Tab -->
-                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">Web projects go here.</div>
+                <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="web-tab">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="list-group" id="list-tab" role="tablist"><!-- These links will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="tab-content" id="nav-tabContent"><!-- This content will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 <!-- Other Tab -->
-                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">Other projects go here.</div>
+                <div class="tab-pane fade" id="other" role="tabpanel" aria-labelledby="other-tab">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="list-group" id="list-tab" role="tablist"><!-- These links will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="tab-content" id="nav-tabContent"><!-- This content will be created in JS with data from Github. -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </main>
@@ -119,10 +138,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
