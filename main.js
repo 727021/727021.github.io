@@ -1,16 +1,19 @@
 const DEBUG = true;
 
-/**
- * html_url
- * description?
- * updated_at
- * stargazers_count
- * forks_count
- * html_url /network/members
- * html_url /stargazers
- */
+function getDesc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var desc = JSON.parse(this.responseText);
+            getGit(desc);
+        }
+    }
+    xhttp.open("GET", "info.json", true);
+    xhttp.send()
+}
+getDesc();
 
-function sendAjax() {
+function getGit(desc = {}) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -43,7 +46,7 @@ function sendAjax() {
                         break;
                 }
             }
-            populateTabs(["cs","cpp","java","web","other"], arr);
+            populateTabs(["cs","cpp","java","web","other"], arr, desc);
 
             $('[data-toggle="tooltip"]').tooltip();
         }
@@ -51,9 +54,8 @@ function sendAjax() {
     xhttp.open("GET", "https://api.github.com/users/727021/repos", true);
     xhttp.send();
 }
-sendAjax();
 
-function populateTabs(tabIds, arr) {
+function populateTabs(tabIds, arr, desc = {}) {
     if (DEBUG) {
         console.log("In populateTab(tabIds, arr):");
         console.log(arr);
@@ -91,7 +93,7 @@ function populateTabs(tabIds, arr) {
                             </div>
                         </div>
                     </div>
-                    ${(repo.description == null) ? "" : repo.description}
+                    ${(desc[repo.name] != null) ? desc[repo.name] : (repo.description == null) ? "" : repo.description}
                 </div>`
             );
         });

@@ -1,0 +1,25 @@
+{
+    "":"This file contains longer descriptions of my Github repos for use on 727021.github.io/projects.html",
+    "MCSongLite":
+    "MCSongLite is a plugin-based <abbr title='Minecraft is copyright Mojang AB and is not affiliated with this site or its creator.'>Minecraft</abbr> Classic server software I am writing in my (limited) free time. It is being written from scratch, and is not based on MCLawl like previous versions of MCSong.",
+    "MCSong":
+    "A server software for <abbr title='Minecraft is copyright Mojang AB and is not affiliated with this site or its creator.'>Minecraft</abbr> Classic, based on MCLawl.",
+    "Coin-Toss":
+    "This is a simple WinForms application that performs a coin toss. It was created when I was first learning C#.",
+    "MCLawl":
+    "MCLawl is a server software for <abbr title='Minecraft is copyright Mojang AB and is not affiliated with this site or its creator.'>Minecraft</abbr> Classic. It was created by Lawlcat, Zallist, and Valek, and is the basis for many other <abbr title='Minecraft is copyright Mojang AB and is not affiliated with this site or its creator.'>Minecraft</abbr> Classic servers, including MCSong.",
+    "The-Game":
+    "The-Game is a simple text-based game I started working on for fun. In the future, I plan to make it less text-based and turn it into something actually playable.",
+    "OLD-MCSong":
+    "This is an old version of MCSong that is no longer in development. This project is from before I decided to start over with a fresh MCLawl source and rewrite MCSong.",
+    "FoodStorageTracker":
+    "This is an Android app created in my Web Engineering I class. It is used to keep track of and manage food storage.",
+    "GameruleGetter":
+    "A <abbr title='Minecraft is copyright Mojang AB and is not affiliated with this site or its creator.'>Minecraft</abbr> server (Bukkit) plugin that allows players to view gamerules without being able to change them.",
+    "AntiCreep":
+    "A <abbr title='Minecraft is copyright Mojang AB and is not affiliated with this site or its creator.'>Minecraft</abbr> server (Bukkit) plugin that prevents exploding creepers from breaking blocks.",
+    "727021.github.io":
+    "This website. It uses Bootstrap and jQuery, and serves as a place for me to showcase my projects and skills.",
+    "cs313-php":
+    "A simple PHP application created in my Web Engineering II class. It is hosted on heroku, <a target='_blank' href='https://frozen-lowlands-50345.herokuapp.com/'>here</a>."
+}
