@@ -50,7 +50,7 @@ function getGit(desc = {}) {
 
             $('[data-toggle="tooltip"]').tooltip();
         }
-        else if (this.readyState == 4 && this.status == 403) {
+        else if (this.readyState == 4 && this.status != 200) {
             ["cs","cpp","java","web","other"].forEach(id => {
                 $(`#${id}`).html("Failed to load data. Click <a href='https://github.com/727021?tab=repositories'>here</a> for a list of projects.")
             });
