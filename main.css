@@ -1,0 +1,16 @@
+#copyright {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+a[href="#top"] {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  padding: 0 0.75rem;
+  display: none;
+  border: none;
+  z-index: 1;
+}
