@@ -94,6 +94,7 @@ function populateTabs(tabIds, arr, desc = {}) {
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="Stargazers" role="button" class="btn btn-secondary" href="${repo.html_url}/stargazers"><i class="fas fa-star"><sub>${repo.stargazers_count}</sub></i></a>
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="Forks" role="button" class="btn btn-secondary" href="${repo.html_url}/network/members"><i class="fas fa-code-branch"><sub>${repo.forks_count}</sub></i></a>
                                     <a target="_blank" data-toggle="tooltip" data-placement="top" title="Source" role="button" class="btn btn-primary" href="${repo.html_url}"><i class="fas fa-code"></i></a>
+                                    ${(repo.homepage == null) ? `` : `<a target="_blank" data-toggle="tooltip" data-placement="top" title="Homepage" role="button" class="btn btn-success" href="${repo.homepage}"><i class="fas fa-tv"></i></a>`}
                                 </div>
                             </div>
                         </div>
