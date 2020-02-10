@@ -94,6 +94,11 @@
         // Load projects from 'projects.json' and GitHub
         $(function() {
             // use marked() to parse markdown
+            fetch('https://raw.githubusercontent.com/727021/727021.github.io/master/projects.json')
+            .then((response) => { return response.json() })
+            .then((myJSON) => {
+                console.log(myJSON)
+            })
         })
     </script>
 </body>
