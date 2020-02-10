@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
         <a class="navbar-brand" href="#">727021</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -34,12 +34,13 @@
         </div>
     </nav>
     <div class="container">
+        <h1 class="display-4">Projects</h1>
         <div id="accordianId" role="tablist" aria-multiselectable="true">
             <div class="card">
                 <div class="card-header" role="tab" id="project1HeaderId">
                     <h5 class="mb-0">
                         <a data-toggle="collapse" data-parent="#accordianId" href="#project1" aria-expanded="true" aria-controls="project1">
-                        Project 1
+                            <i id="angle" class="fas fa-plus"></i> Project 1
                         </a>
                     </h5>
                 </div>
@@ -53,7 +54,7 @@
                 <div class="card-header" role="tab" id="project2HeaderId">
                     <h5 class="mb-0">
                         <a data-toggle="collapse" data-parent="#accordianId" href="#project2" aria-expanded="true" aria-controls="project2">
-                        Project 2
+                            <i id="angle" class="fas fa-plus"></i> Project 2
                         </a>
                     </h5>
                 </div>
@@ -78,6 +79,12 @@
                 if ($(this) != $collapse)
                     $(this).collapse('hide')
             })
+        })
+        $(".collapse").on('show.bs.collapse', function() {
+            $(`#${$(this).attr("aria-labelledby")} #angle`).removeClass("fa-plus").addClass("fa-minus")
+        })
+        $(".collapse").on('hide.bs.collapse', function() {
+            $(`#${$(this).attr("aria-labelledby")} #angle`).removeClass("fa-minus").addClass("fa-plus")
         })
 
         // Load projects from 'projects.json' and GitHub
