@@ -22,15 +22,15 @@ $(function() {
         $('[data-toggle="tooltip"]').tooltip()
     }
 
-    function getGitInfo(projects, currentIndex = 0) {
-        if (currentIndex >= projects.length) return $('#projectsAccordion').children().first().remove()
+    function getGitInfo(projects, currentIndex = projects.length - 1) {
+        if (currentIndex < 0) return $('#loading').remove()
         let project = projects[currentIndex]
         project.id = project.title.replace(/ /g, '-')
         if (project.repoName) {
             fetch(`https://api.github.com/repos/727021/${project.repoName}`)
             .then(response => { return response.json() })
             .then(json => {
-                $('#projectsAccordion').append(`
+                $('#projectsAccordion').prepend(`
                 <div class="card">
                     <div class="card-header" role="tab" id="${project.id}-Header">
                         <div class="row">
@@ -53,8 +53,8 @@ $(function() {
                 `)
                 bindEvents()
 
-                console.log(`Loaded project '${project.title}' (${currentIndex + 1}/${projects.length})`)
-                return currentIndex + 1
+                console.log(`Loaded project '${project.title}' (${projects.length - currentIndex}/${projects.length})`)
+                return currentIndex - 1
             })
             .then(index => { getGitInfo(projects, index) })
         } else { // No Github repo
@@ -77,8 +77,8 @@ $(function() {
             `)
             bindEvents()
 
-            console.log(`Loaded project '${project.title}' (${currentIndex + 1}/${projects.length})`)
-            getGitInfo(projects, currentIndex + 1)
+            console.log(`Loaded project '${project.title}' (${projects.length - currentIndex}/${projects.length})`)
+            getGitInfo(projects, currentIndex - 1)
         }
     }
 
