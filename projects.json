@@ -41,7 +41,7 @@
         "title":"MCSong",
         "subtitle":"A highly customizable server software for Classicube and Minecraft Classic",
         "repoName":"MCSong",
-        "description":"",
+        "description":"**MCSong** is a multiplayer server software for Classicube and the once-popular \"classic\" version of Minecraft. It is one of many server softwares based on MCLawl.\n\nThis is one of my oldest projects. I first started working on it in 2012, and I am still improving it today. The server communicates with clients over TCP sockets and uses SQLite to store player and level data.",
         "technologies":[
             "C#",
             ".NET",
