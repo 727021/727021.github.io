@@ -1,52 +1,42 @@
 [
     {
+        "title": "Replacr",
+        "subtitle": "A simple Vue app for testing regex string replacement",
+        "repoName": "Replacr",
+        "description": "**Replacr** is a vary simple Vue application that can be used to test regex replacement strings in JavaScript. I wanted something like this to use while developing other projects, but couldn't find anything similar that I liked online, so I made it myself. I used [Vuetify](https://vuetifyjs.com/en/) for all of the UI components.",
+        "technologies": [ "VueJS" ],
+        "publish": true
+    },
+    {
         "title": "Github Pages ePortfolio",
-        "subtitle":"This website",
-        "repoName":"727021.github.io",
-        "description":"**727021.github.io** was built so I would have a place to share some of the projects I've worked on. Take a look around and let me know what you think! For more information about me and my professional/technical experience, see my [resume](resume.html).",
-        "technologies":[
-            "HTML",
-            "CSS (Bootstrap)",
-            "JavaScript (jQuery)"
-        ],
-        "publish":true
+        "subtitle": "This website",
+        "repoName": "727021.github.io",
+        "description": "**727021.github.io** was built so I would have a place to share some of the projects I've worked on. Take a look around and let me know what you think! For more information about me and my professional/technical experience, see my [resume](resume.html).",
+        "technologies": [ "HTML", "CSS (Bootstrap)", "JavaScript (jQuery)" ],
+        "publish": true
     },
     {
-        "title":"MTGBuilder",
-        "subtitle":"A social deck building site for Magic: The Gathering",
-        "repoName":"MTGBuilder",
-        "description":"**MTGBuilder** is a social deck building site for the *Magic: The Gathering* trading card game written in my Web Engineering II class. It uses a third-party REST API to get card data and stores user and deck information in a SQL database. It has features like status updates, deck sharing/copying, and the ability to follow other users. You can also search cards, decks, and users.",
-        "technologies":[
-            "NodeJS",
-            "PostgreSQL",
-            "EJS",
-            "CSS (Bootstrap)",
-            "JavaScript (jQuery)"
-        ],
-        "publish":true
+        "title": "MTGBuilder",
+        "subtitle": "A social deck building site for Magic: The Gathering",
+        "repoName": "MTGBuilder",
+        "description": "**MTGBuilder** is a social deck building site for the *Magic: The Gathering* trading card game written in my Web Engineering II class. It uses a third-party REST API to get card data and stores user and deck information in a SQL database. It has features like status updates, deck sharing/copying, and the ability to follow other users. You can also search cards, decks, and users.",
+        "technologies": [ "NodeJS", "PostgreSQL", "EJS", "CSS (Bootstrap)", "JavaScript (jQuery)" ],
+        "publish": true
     },
     {
-        "title":"Food Storage Tracker",
-        "subtitle":"An Android application used to track food storage",
-        "repoName":"FoodStorageTracker",
-        "description":"**Food Storage Tracker** is an Android application created as a semester project in my Software Design and Development class. I worked with a team of two other students to design and create this app. It is essentially an interface for a food storage database populated by the user. Users can enter food items they are storing with expiration dates, and will receive notifications when food is close to expiring and needs to be used or replaced.\n\nAs the lead developer on my team, my responsibilities included helping the project manager to determine what assignments needed to be made and maintaining our code on GitHub. I helped our team follow style guidelines and make sound desicions conceringin the design of our application.",
-        "technologies":[
-            "Java",
-            "SQLite",
-            "Android Studio"
-        ],
-        "publish":true
+        "title": "Food Storage Tracker",
+        "subtitle": "An Android application used to track food storage",
+        "repoName": "FoodStorageTracker",
+        "description": "**Food Storage Tracker** is an Android application created as a semester project in my Software Design and Development class. I worked with a team of two other students to design and create this app. It is essentially an interface for a food storage database populated by the user. Users can enter food items they are storing with expiration dates, and will receive notifications when food is close to expiring and needs to be used or replaced.\n\nAs the lead developer on my team, my responsibilities included helping the project manager to determine what assignments needed to be made and maintaining our code on GitHub. I helped our team follow style guidelines and make sound desicions conceringin the design of our application.",
+        "technologies": [ "Java", "SQLite", "Android Studio" ],
+        "publish": true
     },
     {
-        "title":"MCSong",
-        "subtitle":"A highly customizable server software for Classicube and Minecraft Classic",
-        "repoName":"MCSong",
-        "description":"**MCSong** is a multiplayer server software for Classicube and the once-popular \"classic\" version of Minecraft. It is one of many server softwares based on MCLawl.\n\nThis is one of my oldest projects. I first started working on it in 2012, and I am still improving it today. The server communicates with clients over TCP sockets and uses SQLite to store player and level data.",
-        "technologies":[
-            "C#",
-            ".NET",
-            "SQLite"
-        ],
-        "publish":true
+        "title": "MCSong",
+        "subtitle": "A highly customizable server software for Classicube and Minecraft Classic",
+        "repoName": "MCSong",
+        "description": "**MCSong** is a multiplayer server software for Classicube and the once-popular \"classic\" version of Minecraft. It is one of many server softwares based on MCLawl.\n\nThis is one of my oldest projects. I first started working on it in 2012, and I am still improving it today. The server communicates with clients over TCP sockets and uses SQLite to store player and level data.",
+        "technologies": [ "C#", ".NET", "SQLite" ],
+        "publish": true
     }
 ]
