@@ -5,17 +5,16 @@ $(function() {
         $('.collapse').unbind('show.bs.collapse').unbind('hide.bs.collapse')
 
         // Only open one project at a time
-        $(".collapse").on('show.bs.collapse', function() {
-            $(`#${$(this).attr("aria-labelledby")} #angle`).removeClass("fa-plus").addClass("fa-minus")
+        $('.collapse').on('show.bs.collapse', function() {
+            $(`#${$(this).attr('aria-labelledby')} #angle`).removeClass('fa-plus').addClass('fa-minus')
             $collapse = $(this)
-            $(".collapse").each(function() {
-                if ($(this) != $collapse)
-                    $(this).collapse('hide')
+            $('.collapse').each(function() {
+                if ($(this) != $collapse) $(this).collapse('hide')
             })
         })
 
-        $(".collapse").on('hide.bs.collapse', function() {
-            $(`#${$(this).attr("aria-labelledby")} #angle`).removeClass("fa-minus").addClass("fa-plus")
+        $('.collapse').on('hide.bs.collapse', function() {
+            $(`#${$(this).attr('aria-labelledby')} #angle`).removeClass('fa-minus').addClass('fa-plus')
         })
 
         // Initialize tooltips
@@ -28,9 +27,11 @@ $(function() {
         project.id = project.title.replace(/ /g, '-')
         if (project.repoName) {
             fetch(`https://api.github.com/repos/727021/${project.repoName}`)
-            .then(response => { return response.json() })
-            .then(json => {
-                $('#projectsAccordion').prepend(`
+                .then(response => {
+                    return response.json()
+                })
+                .then(json => {
+                    $('#projectsAccordion').prepend(`
                 <div class="card">
                     <div class="card-header" role="tab" id="${project.id}-Header">
                         <div class="row">
@@ -39,25 +40,36 @@ $(function() {
                                 <small class="text-muted">${project.subtitle}</small>
                             </div>
                             <div class="col-2 text-right">
-                                ${json.homepage ? `<a target="_blank" href="${json.homepage}" class="btn btn-secondary" role="button" data-toggle="tooltip" title="Website"><i class="fas fa-desktop"></i></a>` : ''}
+                                ${json.homepage
+                                    ? `<a target="_blank" href="${json.homepage}" class="btn btn-secondary" role="button" data-toggle="tooltip" title="Website"><i class="fas fa-desktop"></i></a>`
+                                    : ''}
                                 <a target="_blank" href="${json.html_url}" class="btn btn-primary" role="button" data-toggle="tooltip" title="Github"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
                     </div>
                     <div id="${project.id}" class="collapse in" role="tabpanel" aria-labelledby="${project.id}-Header">
                         <div class="card-body">
-                            ${marked(`${project.description}\n\n---\n\nTechnologies used:\n\n- ${project.technologies.join('\n- ')}`)}
+                            ${marked(
+                                `${project.description}\n\n---\n\nTechnologies used:\n\n- ${project.technologies.join(
+                                    '\n- '
+                                )}`
+                            )}
                         </div>
                     </div>
                 </div>
                 `)
-                bindEvents()
+                    bindEvents()
 
-                console.log(`Loaded project '${project.title}' (${projects.length - currentIndex}/${projects.length})`)
-                return currentIndex - 1
-            })
-            .then(index => { getGitInfo(projects, index) })
-        } else { // No Github repo
+                    console.log(
+                        `Loaded project '${project.title}' (${projects.length - currentIndex}/${projects.length})`
+                    )
+                    return currentIndex - 1
+                })
+                .then(index => {
+                    getGitInfo(projects, index)
+                })
+        } else {
+            // No Github repo
             $('#projectsAccordion').append(`
             <div class="card">
                 <div class="card-header" role="tab" id="${project.id}-Header">
@@ -70,7 +82,11 @@ $(function() {
                 </div>
                 <div id="${project.id}" class="collapse in" role="tabpanel" aria-labelledby="${project.id}-Header">
                     <div class="card-body">
-                        ${marked(`${project.description}${(project.technologies.length == 0) ? "" : `\n\n---\n\nTechnologies used:\n\n- ${project.technologies.join('\n- ')}`}`)}
+                        ${marked(
+                            `${project.description}${project.technologies.length == 0
+                                ? ''
+                                : `\n\n---\n\nTechnologies used:\n\n- ${project.technologies.join('\n- ')}`}`
+                        )}
                     </div>
                 </div>
             </div>
@@ -83,8 +99,10 @@ $(function() {
     }
 
     fetch('projects.json')
-    .then(response => { return response.json() })
-    .then(myJSON => {
-        getGitInfo(myJSON)
-    })
+        .then(response => {
+            return response.json()
+        })
+        .then(myJSON => {
+            getGitInfo(myJSON)
+        })
 })
