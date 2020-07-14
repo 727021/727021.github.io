@@ -1,10 +1,18 @@
 [
     {
+        "title": "CookShare",
+        "subtitle": "A web app allowing users to share cookbooks with family and friends while keeping their recipes private",
+        "repoName": "CookShare",
+        "description": "**CookShare** is a web app that uses a Vue frontent, a Node/Express backend, and a MongoDB database. It allows users to create private recipes, then add those recipes to private or shared cookbooks. This is my first project using Vue (or any frontend JavaScript framework). I used [BootstrapVue](https://bootstrap-vue.org/) for most of the UI components, as well as [FontAwesome](https://www.npmjs.com/package/@fortawesome/vue-fontawesome) for icons. Check it out, and let me know what you think!",
+        "technologies": [ "Node.js", "Express", "MongoDB", "Vue" ],
+        "publish": true
+    },
+    {
         "title": "Replacr",
         "subtitle": "A simple Vue app for testing regex string replacement",
         "repoName": "Replacr",
-        "description": "**Replacr** is a vary simple Vue application that can be used to test regex replacement strings in JavaScript. I wanted something like this to use while developing other projects, but couldn't find anything similar that I liked online, so I made it myself. I used [Vuetify](https://vuetifyjs.com/en/) for all of the UI components.",
-        "technologies": [ "VueJS" ],
+        "description": "**Replacr** is a very simple Vue application that can be used to test regex string replacement in JavaScript. I wanted something like this to use while developing other projects, but couldn't find anything similar that I liked online, so I made it myself. I used [Vuetify](https://vuetifyjs.com/en/) for all of the UI components.",
+        "technologies": [ "Vue" ],
         "publish": true
     },
     {
@@ -20,7 +28,7 @@
         "subtitle": "A social deck building site for Magic: The Gathering",
         "repoName": "MTGBuilder",
         "description": "**MTGBuilder** is a social deck building site for the *Magic: The Gathering* trading card game written in my Web Engineering II class. It uses a third-party REST API to get card data and stores user and deck information in a SQL database. It has features like status updates, deck sharing/copying, and the ability to follow other users. You can also search cards, decks, and users.",
-        "technologies": [ "NodeJS", "PostgreSQL", "EJS", "CSS (Bootstrap)", "JavaScript (jQuery)" ],
+        "technologies": [ "Node.js", "PostgreSQL", "EJS", "CSS (Bootstrap)", "JavaScript (jQuery)" ],
         "publish": true
     },
     {
